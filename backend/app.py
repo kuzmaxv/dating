@@ -1,6 +1,9 @@
 from flask import Flask, request, jsonify
 import mysql.connector
 import json
+from backend.models.user import User
+from backend.models.profile import Profile
+from backend.models.match import Match
 from backend.routes.auth import auth_bp
 from backend.routes.profile import profile_bp
 from backend.routes.search import search_bp
