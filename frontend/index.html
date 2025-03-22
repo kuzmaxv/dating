@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dating App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <h1>Приложение знакомств</h1>
+
+        <!-- Форма для создания профиля -->
+        <div id="profile-form" class="form-container">
+            <h2>Создание профиля</h2>
+            <form id="create-profile-form">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" required>
+
+                <label for="city">Город:</label>
+                <input type="text" id="city" required>
+
+                <label for="age">Возраст:</label>
+                <input type="number" id="age" required>
+
+                <label for="gender">Пол:</label>
+                <select id="gender" required>
+                    <option value="male">Мужской</option>
+                    <option value="female">Женский</option>
+                    <option value="other">Другой</option>
+                </select>
+
+                <label for="height">Рост (см):</label>
+                <input type="number" id="height" required>
+
+                <label for="eye-color">Цвет глаз:</label>
+                <input type="text" id="eye-color" required>
+
+                <label for="hair-color">Цвет волос:</label>
+                <input type="text" id="hair-color" required>
+
+                <label for="bio">Био:</label>
+                <textarea id="bio" rows="4" required></textarea>
+
+                <label for="interests">Интересы:</label>
+                <input type="text" id="interests" required>
+
+                <label for="hobbies">Хобби:</label>
+                <input type="text" id="hobbies" required>
+
+                <label for="goals">Цели знакомства:</label>
+                <input type="text" id="goals" required>
+
+                <label for="photos">Фото (до 5):</label>
+                <input type="file" id="photos" multiple accept="image/*">
+
+                <button type="submit">Сохранить профиль</button>
+            </form>
+        </div>
+
+        <!-- Поиск анкет -->
+        <div id="search-section" class="form-container">
+            <h2>Поиск анкет</h2>
+            <form id="search-form">
+                <label for="search-city">Город:</label>
+                <input type="text" id="search-city">
+
+                <label for="search-age-min">Возраст от:</label>
+                <input type="number" id="search-age-min">
+
+                <label for="search-age-max">Возраст до:</label>
+                <input type="number" id="search-age-max">
+
+                <label for="search-gender">Пол:</label>
+                <select id="search-gender">
+                    <option value="any">Любой</option>
+                    <option value="male">Мужской</option>
+                    <option value="female">Женский</option>
+                </select>
+
+                <label for="search-height-min">Рост от (см):</label>
+                <input type="number" id="search-height-min">
+
+                <label for="search-height-max">Рост до (см):</label>
+                <input type="number" id="search-height-max">
+
+                <label for="search-eye-color">Цвет глаз:</label>
+                <input type="text" id="search-eye-color">
+
+                <label for="search-hair-color">Цвет волос:</label>
+                <input type="text" id="search-hair-color">
+
+                <label for="search-interests">Интересы:</label>
+                <input type="text" id="search-interests">
+
+                <button type="submit">Искать</button>
+            </form>
+        </div>
+
+        <!-- Результаты поиска -->
+        <div id="search-results">
+            <h2>Результаты поиска</h2>
+            <div id="profiles-list"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
